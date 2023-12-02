@@ -1,6 +1,8 @@
 .bearish_arrow {
   width: 7px;
   height: 15px;
+  min-width: 7px;
+  min-height: 15px;
   /* transform: matrix(0, 1, -1, 0, 0, 0); */
   border: 0.4000000059604645px solid #e9edf2;
   opacity: 1;
@@ -66,9 +68,14 @@
 
 .table-header-text {
   text-align: left;
-  font: normal normal 600 13px Source Serif Pro;
+  font: normal normal 600 11px/15px Source Serif Pro;
   letter-spacing: 0px;
   color: #000000;
+  opacity: 1;
+}
+
+.table-header-text.thirty {
+  width: 33.333%;
 }
 
 .table-body-text {
@@ -170,4 +177,11 @@
 
 .drawer-close {
   display: none;
+}
+
+/* Media Query */
+@media screen and (max-width: 1086px) {
+  .bearish-right-panel {
+    display: none;
+  }
 }

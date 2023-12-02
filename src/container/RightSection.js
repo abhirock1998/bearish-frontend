@@ -29,7 +29,7 @@ const RightSection = () => {
         <LinkCard />
         <LinkCard />
         <LinkCard />
-        <SectionViewMoreTile />
+        <SectionViewMoreTile ignoreState />
       </div>
     </React.Fragment>
   );

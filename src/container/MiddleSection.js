@@ -125,7 +125,7 @@ const FolderCard = ({ title = "Folder 1" }) => {
 const TableHeaderSection = () => {
   return (
     <div className="flex gap-3 items-center">
-      <div className="table-header-text flex-1 p-2 ">
+      <div className="table-header-text thirty p-2 ">
         <span>Name</span>
       </div>
       <div className="table-header-text flex-1 p-2">
@@ -138,7 +138,7 @@ const TableHeaderSection = () => {
         <img
           src={settingIcon}
           alt="setting-icon"
-          className="w-[20px] h-[20px] ml-auto"
+          className="w-[20px] h-[20px] ml-auto cursor-pointer"
         />
       </div>
     </div>
@@ -148,8 +148,8 @@ const TableHeaderSection = () => {
 const TableBodyRowSection = () => {
   return (
     <div className="flex gap-3 items-center bg-white mb-[0.5px]">
-      <div className="table-header-text flex-1 p-2">
-        <div className="table-body-text flex items-center ">
+      <div className="table-header-text thirty p-2">
+        <div className="table-body-text flex items-center">
           <img
             src={docFormatIcon}
             alt="doc-format-icon"
@@ -170,7 +170,7 @@ const TableBodyRowSection = () => {
       </div>
       <div className="table-header-text flex-1 p-2">
         <div className="table-body-text flex flex-col justify-center">
-          Name of the file
+          6 days ago
         </div>
       </div>
       <div className="table-header-text flex-1 p-2">
@@ -178,7 +178,7 @@ const TableBodyRowSection = () => {
           <img
             src={moreIcon}
             alt="more-icon"
-            className="w-[20px] h-[20px] object-contain ml-auto"
+            className="w-[20px] h-[20px] object-contain ml-auto cursor-pointer"
           />
         </div>
       </div>

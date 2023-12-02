@@ -101,9 +101,9 @@ const LeftSectionOptionTile = ({
   );
 };
 
-export const SectionViewMoreTile = () => {
+export const SectionViewMoreTile = ({ ignoreState = false }) => {
   const isOpen = useSelector(selectDrawer);
-  if (!isOpen) {
+  if (!isOpen && !ignoreState) {
     return (
       <div className="flex gap-2 items-center justify-center">
         <span className="block bearish_arrow green down" />

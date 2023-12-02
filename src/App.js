@@ -14,15 +14,15 @@ function App() {
       <div className="flex h-full">
         <div
           className={`${
-            isOpen ? "w-[20%] " : "w-[5%]"
-          } h-full transition-all duration-100`}
+            isOpen ? "w-[20%] " : ""
+          } h-full transition-all duration-100 min-w-[5%]`}
         >
           <LeftSection />
         </div>
-        <div className="flex-1 h-full ">
+        <div className="lg:flex-1 h-full md:w-full max-w-[95%] ">
           <MiddleSection />
         </div>
-        <div className="w-[20%] h-full">
+        <div className="w-[20%] h-full bearish-right-panel">
           <RightSection />
         </div>
       </div>
