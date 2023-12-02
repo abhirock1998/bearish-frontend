@@ -1,39 +1,173 @@
-.App {
-  text-align: center;
+.bearish_arrow {
+  width: 7px;
+  height: 15px;
+  /* transform: matrix(0, 1, -1, 0, 0, 0); */
+  border: 0.4000000059604645px solid #e9edf2;
+  opacity: 1;
+  clip-path: polygon(0 1%, 0% 100%, 100% 49%);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bearish_arrow.left {
+  transform: rotate(180deg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.bearish_arrow.right {
+  transform: rotate(0deg);
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.bearish_arrow.green {
+  background: #00767b 0% 0% no-repeat padding-box;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.bearish_arrow.white {
+  background: #ffffff;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.bearish_arrow.down {
+  transform: rotate(90deg);
+}
+
+/* Top Section Profile Avatar */
+.profile-avatar-container {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: inset 0px 3px 6px #00000029, 0px 3px 6px #00000029;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+/* Dashboard Main Area  */
+.dashboard-main-area {
+  height: calc(100% - 60px);
+}
+
+.create-button {
+  box-shadow: 0px 6px 6px #00767b29;
+  border: 1px solid #e9edf2;
+}
+
+.create-button-text {
+  text-align: left;
+  font: normal normal 300 15px/21px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.section-title {
+  text-align: left;
+  font: normal normal 600 15px/21px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+.table-header-text {
+  text-align: left;
+  font: normal normal 600 13px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #000000;
+}
+
+.table-body-text {
+  text-align: left;
+  font: normal normal 600 13px/17px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+/* Storage Capacity Progress bar */
+.progress_bar_yellow {
+  background-color: #ffecc7;
+}
+.progress_bar_yellow > div {
+  background-color: #ffa700;
+}
+
+.progress_bar_blue {
+  background-color: #a0b6ff;
+}
+
+.progress_bar_blue > div {
+  background-color: #0008c6;
+}
+
+.progress_bar_green {
+  background-color: #5ee2a0;
+}
+
+.progress_bar_green > div {
+  background-color: #085a15;
+}
+
+.progress_usage_stats {
+  text-align: left;
+  font: normal normal normal 11px/15px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #000000;
+}
+
+/* Text Style like Link button text */
+.blue_text {
+  color: #000aff;
+  text-align: left;
+  text-decoration: underline;
+  font: normal normal normal 14px/18px Source Serif Pro;
+  letter-spacing: 0px;
+}
+
+.folder-card-name {
+  text-align: left;
+  font: normal normal 600 13px/17px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+/* Right Section CSS START */
+.cloud-analytics {
+  text-align: left;
+  font: normal normal 600 15px/21px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+.cloud-analytics-link-text {
+  text-align: left;
+  font: normal normal 200 12px/15px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+.link-card {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e9edf2;
+  border-radius: 5px;
+  opacity: 1;
+}
+.link-card-title {
+  text-align: left;
+  font: normal normal 600 13px/17px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+.link-card-subtitle {
+  text-align: left;
+  font: normal normal 300 13px/17px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+/* Drawer State */
+
+.drawer-close {
+  display: none;
 }

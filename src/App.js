@@ -1,56 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import "./App.css";
+import LeftSection from "./container/LeftSection";
+import MiddleSection from "./container/MiddleSection";
+import RightSection from "./container/RightSection";
+import { selectDrawer } from "./features/bearishSlice";
+import { useSelector } from "react-redux";
 
 function App() {
+  const isOpen = useSelector(selectDrawer);
+  console.log("Is Open", isOpen);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    <div className="h-screen ">
+      <div className="flex h-full">
+        <div
+          className={`${
+            isOpen ? "w-[20%] " : "w-[5%]"
+          } h-full transition-all duration-100`}
+        >
+          <LeftSection />
+        </div>
+        <div className="flex-1 h-full ">
+          <MiddleSection />
+        </div>
+        <div className="w-[20%] h-full">
+          <RightSection />
+        </div>
+      </div>
     </div>
   );
 }
